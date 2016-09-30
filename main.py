@@ -21,7 +21,7 @@ def flow(string):
 @app.route("/")
 def root():
     strings = load(open("memes.json"))
-    string = flow(choice(strings))
+    string = flow(choice(strings).split(" - ")[0])
 
     image = Image.open("base.png")
 
